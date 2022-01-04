@@ -1,0 +1,14 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    - name:  apache2 and php package
+      apt:
+        name: 
+          - " {{ apache_package }}"
+          - " {{ php_package }}"
+        state:  latest
+        update_cache: yes
+
+     
